@@ -1,3 +1,8 @@
+#main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #container {
     border: 10px solid black;
     height: 800px;
@@ -10,4 +15,15 @@
     border: 1px solid black;
     height: 48px;
     width: 48px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+button {
+    height: 25px;
+    width: 100px;
 }
