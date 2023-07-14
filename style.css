@@ -18,10 +18,25 @@
 #buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    height: fit-content;
 }
 
 button {
     height: 25px;
     width: 100px;
+    border-radius: 1em;
+    border: 1px solid black;
+    margin: 5em;
+}
+
+#color-modes {
+    border-radius: 1em;
+    border: 1px solid black;
+    padding: 1em;
+}
+
+#color-modes:focus,
+#color-modes:focus-visible {
+    border: 1px solid black;
 }
