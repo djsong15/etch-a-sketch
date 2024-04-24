@@ -33,10 +33,6 @@ sizeBtn.addEventListener('click', () => {
 const colorMode = document.querySelector('#color-modes');
 colorMode.addEventListener('change', (event) => {
     console.log(colorMode.value);
-    // let color;
-    // if (colorMode.value === 'black') color = 'black';
-    // else if (colorMode.value === 'random') color = Math.floor(Math.random()*16777215).toString(16);
-    // else color = 'white';
 
     let currentGridChild = container.firstChild;
     while (currentGridChild !== container.lastChild) {
@@ -48,6 +44,11 @@ colorMode.addEventListener('change', (event) => {
         });
         currentGridChild = currentGridChild.nextSibling;
     }
+    currentGridChild.addEventListener('mouseover', e => {
+        e.target.style.background = colorMode.value === 'black' ? 'black'
+                                    : colorMode.value === 'random' ? ('#' + Math.floor(Math.random()*16777215).toString(16))
+                                    : 'white';
+    });
 })
 
 const clearBtn = document.querySelector('#clear');
